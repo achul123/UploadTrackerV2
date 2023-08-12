@@ -65,8 +65,9 @@ export function bytesToHuman(bytes: number, si=true, dp=1): string {
 You can check with the node -v command if you have installed NodeJS v16.  
 Any higher version won't work, so you can use nvm or normal nodejs.
 
-1. cd /var/www/pterodactyl
-2. npm install -g yarn
+
+1. npm install -g yarn
+2. cd /var/www/pterodactyl
 3. yarn
 4. yarn build:production
 
