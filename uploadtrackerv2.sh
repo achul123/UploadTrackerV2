@@ -5,7 +5,7 @@ sudo apt install -y nodejs npm git
 
 npm install -g yarn
 
-cd /var/www/pterodactyl
+cd /var/www/pterodactyltest
 yarn
 
 UPLOAD_BUTTON_FILE="resources/scripts/components/server/files/UploadButton.tsx"
