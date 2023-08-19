@@ -11,7 +11,6 @@ yarn
 UPLOAD_BUTTON_FILE="resources/scripts/components/server/files/UploadButton.tsx"
 cd "$UPLOAD_BUTTON_FILE"
 
-# Step 2: Insert the modifications using sed
 sed -i '/import { WithClassname } from/a import { bytesToHuman } from "@/helpers";' "$UPLOAD_BUTTON_FILE"
 sed -i '/const \[loading, setLoading\] = useState(false);/a const \[upload, setUpload\] = useState({ size: 0, totalSize: 0, progress: 0 });' "$UPLOAD_BUTTON_FILE"
 sed -i '/headers: {/a\    onUploadProgress: (progressEvent: ProgressEvent) => {\n        const size = progressEvent.loaded;\n        const totalSize = progressEvent.total;\n        const progress = Math.round((progressEvent.loaded / progressEvent.total) * 100);\n        setUpload({ size, totalSize, progress });\n    },' "$UPLOAD_BUTTON_FILE"
